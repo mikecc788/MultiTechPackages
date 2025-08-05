@@ -9,7 +9,7 @@
 import CoreBluetooth
 import Foundation
 
-public final class CoreBluetoothCentral: NSObject, Sendable {
+public final class CoreBluetoothCentral: NSObject, @unchecked Sendable {
     private let queue = DispatchQueue(label: "bt.core.central")
     private var central: CBCentralManager!
     private var stateContinuation: AsyncStream<CentralState>.Continuation?
